@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- FAVICON -->
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <!-- HEADER TITLE -->
+      <ion-title size="large" class="register">register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- ALL CONTENT -->
+  <div id="container">
+    <div class="wrapper-login">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+    
+        <!-- Icon -->
+        <div class="first">
+          <ion-icon class="user-icon" name="person-circle-outline"></ion-icon>
+        </div>
+        <!-- Sign Up form -->
+        <form [style.display]="authState">
+          <input type="text" id="email" class="second" name="email" placeholder="email">
+          <input type="text" id="password" class="third" name="password" placeholder="password">
+          <input type="text" id="password-confirm" class="third" name="password-confirm" placeholder="confirm-password">
+          <div class="auth-btn">
+            <button [routerLink]="['/login']" (click)="login()" class="fourth">Log In</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

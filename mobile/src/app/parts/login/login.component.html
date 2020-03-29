@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- FAVICON -->
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <!-- HEADER TITLE -->
+      <ion-title size="large" class="login">login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- ALL CONTENT -->
+  <div id="container">
+    <div class="wrapper-login">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+    
+        <!-- Icon -->
+        <div class="first">
+          <ion-icon class="user-icon" name="person-circle-outline"></ion-icon>
+        </div>
+    
+        <!-- Login Form -->
+        <form>
+          <input type="text" id="login" class="second" name="login" placeholder="login">
+          <input type="text" id="password" class="third" name="password" placeholder="password">
+          <div class="auth-btn">
+            <button class="fourth">log in</button>
+            <button class="fourth" [routerLink]="['/register']" (click)="register()">Sign Up</button>
+          </div>
+        </form>
+    
+        <!-- Remind Password -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
